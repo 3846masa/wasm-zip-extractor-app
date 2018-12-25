@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zip Extractor</title>
+</head>
+
+<body>
+  <h1>Zip Extractor</h1>
+  <p>
+    <a href="https://github.com/3846masa/wasm-zip-extractor-app" target="_blank">
+      https://github.com/3846masa/wasm-zip-extractor-app
+    </a>
+  </p>
+  <p>
+    <label>
+      <span>Choose file:</span>
+      <input type="file" accept="application/zip" class="js-input" />
+    </label>
+  </p>
+  <ul class="js-list">
+    <template class="js-list-item-template">
+      <li>
+        <span class="js-filename">{{filename}}</span>
+        <button type="button" class="js-extract-button">Extract</button>
+      </li>
+    </template>
+  </ul>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "es2015",
+    "lib": ["dom", "webworker", "esnext"],
+    "moduleResolution": "node"
+  },
+  "include": ["src/**/*"]
+}
