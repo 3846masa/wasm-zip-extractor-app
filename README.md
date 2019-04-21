@@ -1,5 +1,7 @@
 # @3846masa/wasm-zip-extractor-app
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/3846masa/wasm-zip-extractor-app.svg)](https://greenkeeper.io/)
+
 > Zip Extractor powered by Rust WebAssembly + Comlink
 
 ## Demo
