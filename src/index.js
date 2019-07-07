@@ -21,11 +21,11 @@ async function readFile(file) {
 }
 
 /** @typedef {typeof import('./crate/pkg') & typeof import('./worker').wasmModule} WorkerModuleType */
-/** @type {ProxyResult<WorkerModuleType>} */
-const wasm = Comlink.proxy(new Worker('./worker.js', { type: 'module' }));
+/** @type {Comlink.Remote<WorkerModuleType>} */
+const wasm = Comlink.wrap(new Worker('./worker.js', { type: 'module' }));
 
 /**
- * @param {ProxyResult<import('./crate/pkg').ZipReader>} zipReader
+ * @param {Comlink.Remote<import('./crate/pkg').ZipReader>} zipReader
  * @param {string} filename
  */
 async function extractFile(zipReader, filename) {
