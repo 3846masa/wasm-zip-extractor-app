@@ -1,9 +1,9 @@
 import saveAs from 'file-saver';
 import * as Comlink from './comlink';
 
-const $input = document.querySelector('.js-input');
-const $list = document.querySelector('.js-list');
-const $template = document.querySelector('.js-list-item-template');
+const $input = document.querySelector('[data-js="input"]');
+const $list = document.querySelector('[data-js="list"]');
+const $template = document.querySelector('[data-js="list-item-template"]');
 
 $input.addEventListener('change', loadZip);
 
@@ -53,8 +53,8 @@ async function loadZip(ev) {
 
   for (const filename of filenameList) {
     const $item = document.importNode($template.content, true);
-    const $filename = $item.querySelector('.js-filename');
-    const $extract = $item.querySelector('.js-extract-button');
+    const $filename = $item.querySelector('[data-js="filename"]');
+    const $extract = $item.querySelector('[data-js="extract-button"]');
 
     $filename.textContent = filename;
     $extract.addEventListener('click', async () => {
